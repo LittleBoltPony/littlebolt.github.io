@@ -2,7 +2,7 @@
 // Please note the first few versions was made in a day when I was really sick, so I didn't put much care in the code at the time.
 
 //Current Version
-var emotever = "0.14.0";
+var emotever = "0.14.1";
 
 //Change the footer info
 var verNo1 = "version <b>" + emotever + "-alpha";
@@ -1647,7 +1647,7 @@ function updateAll(){
 	}
 	
 	if (lefteye == "lefteye1"){
-		lefttext = "6";
+		lefttext = "0";
 		document.getElementById('ocLeftEye').style.backgroundImage = "url('images/" + randomOC + "/oc/lefteye/1.png')";
 	}else if (lefteye == "lefteye2"){
 		lefttext = "e";
@@ -1711,7 +1711,7 @@ function updateAll(){
 	}
 	
 	if (righteye == "righteye1"){
-		righttext = "6";
+		righttext = "0";
 		document.getElementById('ocRightEye').style.backgroundImage = "url('images/" + randomOC + "/oc/righteye/1.png')";
 	}else if (righteye == "righteye2"){
 		righttext = "g";
@@ -2307,13 +2307,7 @@ function resetAll(){
 }
 
 function resetLoaded(){
-	blush = "blushoff";
-	cry = "cryoff";
-	mouth = "mouth1";
-	lefteye = "lefteye1";
-	righteye = "righteye1";
-	brows = "browsoff";
-	eyes = "eyes1";
+	resetAll();
 }
 
 // This is what triggers the update notification.
