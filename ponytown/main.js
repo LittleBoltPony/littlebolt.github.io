@@ -2,7 +2,7 @@
 // Please note the first few versions was made in a day when I was really sick, so I didn't put much care in the code at the time.
 
 //Current Version
-var emotever = "0.15.0 GH";
+var emotever = "0.15.0 GH-01";
 
 //Change the footer info
 var verNo1 = "version <b>" + emotever + "-alpha";
@@ -476,16 +476,6 @@ function loadPos(){
 		}
 	}
 }
-
-//If someone uses the back and foward button in browser
-$(window).on('popstate', function(){
-	console.log(location.pathname);
-	if (location.pathname == "/ponytown-beta/home" || location.pathname == "/ponytown/home"){
-		loadIndexPage();
-	}else if (location.pathname == "/ponytown-beta/about" || location.pathname == "/ponytown/about"){
-		loadAboutPage();
-	}
-});
 
 //Checks the browser scroll amount and adjusts the oc to say on screen
 $(window).scroll(function() {
