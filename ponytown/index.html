@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 
 ----------------------------------------------------------------------------------
 |----|   .   ------    ------       /\        |----|   |-----|   |\     |   |-----
@@ -13,6 +13,28 @@ This site was made by Little Bolt at http://littlebolt.me
 
 -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<?php
+$theTime=time();
+
+// IP/Country blocking
+$realip = explode(",",$_SERVER['HTTP_X_FORWARDED_FOR']);
+$ipaddress = $_SERVER['HTTP_CF_CONNECTING_IP'];
+$country_code = $_SERVER["HTTP_CF_IPCOUNTRY"];
+
+$handle = fopen("http://base.littlebolt.me/banned.txt", "r") or die("Unable to open file!");
+if ($handle) {
+    while (($line = fgets($handle)) !== false) {
+        if ($ipaddress == $line){
+			header( 'Location: ../error.php' );
+			die;
+		}
+    }
+    fclose($handle);
+} else {
+    echo ("error");
+	die;
+}
+?>
 <html xmlns="http://www.w3.org/1999/xhtml" style="height: 100%;">
 <head>
 <title>PonyTown Unofficial Emote Generator</title>
@@ -21,11 +43,25 @@ This site was made by Little Bolt at http://littlebolt.me
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=0.6, user-scalable=no" />
 <link rel="stylesheet" type="text/css" href="//undertalefonts.duodecima.technology/webfonts/stylesheet.css">
-<link rel="stylesheet" type="text/css" href="main.css">
-<script type="text/javascript" data-cfasync="true" src="main.js"></script>
+<link rel="stylesheet" type="text/css" href="main.css?v=<?php echo $theTime; ?>">
+<script type="text/javascript" data-cfasync="true" src="main.js?v=<?php echo $theTime; ?>"></script>
 <script type="text/javascript" data-cfasync="true" src="html2canvas.js"></script>
+<script>
+var debugCmd = "<?php Print($debugCmd); ?>";
+</script>
 </head>
 <body leftmargin="0px" topmargin="0px" marginwidth="0px" marginheight="0px" style="height: 100%;">
+
+<!--MSG-->
+<?php
+$msgFile = "../data/msg.txt";
+$msgData = file($msgFile);
+
+if ($msgData[0] == 1){
+	echo "<div class='msg' style='display:table;'><div style='display:table-cell;width:100%;vertical-align:middle;'><div><center><font color='white'>" . $msgData[1] . "</font></center></div></div></div>";
+}
+?>
+<!--END-->
 
 <noscript style="width:100%; height:100%;">
 	<table style="width:100%; height:100%;"><tr><td align="center">
@@ -47,12 +83,32 @@ This site was made by Little Bolt at http://littlebolt.me
 <img src='images/bolt/oc/bshadowsit.png' style='width:0px;height:0px;'><img src='images/pizza/oc/bshadowsit.png' style='width:0px;height:0px;'>
 <img src='images/bolt/oc/bmove.png' style='width:0px;height:0px;'><img src='images/pizza/oc/bmove.png' style='width:0px;height:0px;'>
 <img src='images/bolt/oc/bmovesit.png' style='width:0px;height:0px;'><img src='images/pizza/oc/bmovesit.png' style='width:0px;height:0px;'>
+
+<input type='text' name='gameVerTXT' id='gameVerTXT' value=''>
+<input type='text' name='NotifClose' id='NotifClose' value='0'>
+<input type='text' name='UpdateClose' id='UpdateClose' value='0'>
+<iframe src='version.php'></iframe>
 </div>
 
 <script language="javascript">
 $(document).ready(function(){
-	loadIndexPage();
+	function getQueryStringValue (key) {  
+		return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
+	}
+	
+	if (getQueryStringValue("p") == ""){
+		history.replaceState(null, null, 'home');
+		loadIndexPage();
+	}else if (getQueryStringValue("p") == "home"){
+		history.replaceState(null, null, 'home');
+		loadIndexPage();
+	}else if (getQueryStringValue("p") == "about"){
+		history.replaceState(null, null, 'about');
+		loadAboutPage();
+	}
 });
+//window.onload = function() {loadedPage()};
+document.getElementById('gameVerTXT').value = emotever;
 </script>
 
 <!-- Start of StatCounter Code for Default Guide -->
