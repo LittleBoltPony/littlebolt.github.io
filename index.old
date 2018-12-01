@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="height: 100%;">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+<meta name="robots" content="noindex">
+<meta name="robots" content="nofollow">
+<link rel="stylesheet" type="text/css" href="main.css">
+<title>Temporarily Unavailable</title>
+
+<body link="#fffff" vlink="#fffff" alink="#fffff" leftmargin="0px" topmargin="0px" marginwidth="0px" marginheight="0px" style="height: 100%;">
+
+<!--Header-->
+<div class='headerlogo'>
+<center><img class='logolarge' src='/images/logo.png' /></center>
+</div>
+<!--Header End-->
+
+<br>
+<table border="0" style='width: 100%;'><tr><td colspan="2" valign="top" align='center'>
+	<div class="errormsg" style="width:96%;max-width:1140px;height:30px;">
+		<center><img class='logolarge' src='/images/tech.png' /></center>
+	</span></div>
+</td></tr></table>
+
+<table border="0" style='width: 100%;'><tr><td colspan="2" valign="top" align='center'>
+	<div class="errormsg" style="width:96%;max-width:1140px;height:30px;">
+		<p class="bodyTxt">We are either experiencing technical difficulties or doing some maintenance.
+		<br>Don't worry, we have Derpy and PizzaPone working on it, hopefully we will be back soon!
+		<br><br>For updates please check my Discord: <a href="https://discord.me/pizzapone">discord.me/pizzapone</a> or my Twitter: <a href="https://twitter.com/LittleBoltPony">@littleboltpony</a>
+		<br><font size="1">[If you keep seeing this when you don't think you should, you may need to clear your cache]</font>
+		</p>
+	</span></div>
+</td></tr></table>
+
+</body>
+</html>
