@@ -346,10 +346,10 @@ div.redMsg {
 	background-color: #cf6461;
 	border-radius: 5px;
 	padding-top: 12px;
+	padding-bottom: 12px;
 	padding-left: 0px;
 	margin-bottom: 12px;
 	text-align: center;
-	height: 30px;
 	width: 400px;
 	-moz-user-select: none;
 	-khtml-user-select: none;
