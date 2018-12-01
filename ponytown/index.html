@@ -22,12 +22,9 @@ This site was made by Little Bolt at http://littlebolt.me
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=0.6, user-scalable=no" />
 <link rel="stylesheet" type="text/css" href="//undertalefonts.duodecima.technology/webfonts/stylesheet.css">
-<link rel="stylesheet" type="text/css" href="main.css?v=1">
-<script type="text/javascript" data-cfasync="true" src="main.js?v=1"></script>
+<link rel="stylesheet" type="text/css" href="main.css?v=02">
+<script type="text/javascript" data-cfasync="true" src="main.js?v=02"></script>
 <script type="text/javascript" data-cfasync="true" src="html2canvas.js"></script>
-<script>
-var debugCmd = "<?php Print($debugCmd); ?>";
-</script>
 </head>
 <body leftmargin="0px" topmargin="0px" marginwidth="0px" marginheight="0px" style="height: 100%;">
 
@@ -56,27 +53,6 @@ var debugCmd = "<?php Print($debugCmd); ?>";
 <input type='text' name='NotifClose' id='NotifClose' value='0'>
 <input type='text' name='UpdateClose' id='UpdateClose' value='0'>
 </div>
-
-<script language="javascript">
-$(document).ready(function(){
-	function getQueryStringValue (key) {  
-		return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
-	}
-	
-	if (getQueryStringValue("p") == ""){
-		history.replaceState(null, null, 'home');
-		loadIndexPage();
-	}else if (getQueryStringValue("p") == "home"){
-		history.replaceState(null, null, 'home');
-		loadIndexPage();
-	}else if (getQueryStringValue("p") == "about"){
-		history.replaceState(null, null, 'about');
-		loadAboutPage();
-	}
-});
-//window.onload = function() {loadedPage()};
-document.getElementById('gameVerTXT').value = emotever;
-</script>
 
 <!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">
