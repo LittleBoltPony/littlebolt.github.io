@@ -2,7 +2,7 @@
 // Please note the first few versions was made in a day when I was really sick, so I didn't put much care in the code at the time.
 
 //Current Version
-var emotever = "0.15.0";
+var emotever = "0.15.0 GH";
 
 //Change the footer info
 var verNo1 = "version <b>" + emotever + "-alpha";
