@@ -10,8 +10,11 @@ body {
 	color:#ffffff;
     text-decoration:none;
 	font-weight: 700;
-    background-size: cover;
-  background-image: url("images/bg.jpg");
+    background: url(images/bg.jpg) cover center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 	background-color:#333333;
 	height: 100%;
 }
@@ -57,6 +60,8 @@ img.offlinebot{
 	color: #ffffff;
 	font-size: 14px;
 	text-align: center;
+	width: 90%;
+	max-width: 1000px;
 }
 .maindiv:span{
 	font-size: 20px;
