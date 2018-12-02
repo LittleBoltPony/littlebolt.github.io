@@ -64,9 +64,10 @@ img.offlinebot{
 	max-width: 1000px;
 	padding: 12px;
 }
-.maindiv:span{
-	font-size: 20px;
+.mainDiv:span{
+	font-size: 30px;
 	text-align: center;
+	margin-bottom: 16px;
 }
 
 p.title{
