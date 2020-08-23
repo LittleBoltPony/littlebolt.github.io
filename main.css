@@ -21,25 +21,25 @@ body {
 
 a:link
 {
-    color:#ca6639;
+    color:#1971c3;
     text-decoration: none;
 }
 
 a:visited
 {
-    color:#ca6639;
+    color:#1971c3;
     text-decoration: none;
 }
 
 a:hover 
 {
-    color:#dca989;
+    color:#2395ff;
     text-decoration: underline;
 }
 
 a:active 
 {
-    color:#dca989;
+    color:#2395ff;
     text-decoration: underline;
 }
 
@@ -56,7 +56,7 @@ img.offlinebot{
 .mainDiv{
 	border: 1px solid #404040;
 	border-radius: 10px;
-	background-color: rgba(89, 89, 89, 0.9);
+	background-color: rgba(89, 89, 100, 0.9);
 	color: #ffffff;
 	font-size: 14px;
 	text-align: center;
